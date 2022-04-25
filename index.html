@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>IMDB DATA VISUALIZATION</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/webservice.js"></script>
+    <script type="text/javascript" src="Scripts/d3.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/dc.css"/>
+    <script type="text/javascript" src="Scripts/crossfilter.js"></script>
+    <script type="text/javascript" src="Scripts/dc.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script>
+        getAllFilms();
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="javascript:getAllFilms();">Get Films</a>
+        <a href="javascript:createNewFilmForm();">Add Films</a>
+        <a href="#histogram">Film by Year</a>
+        <a href="#histogram2">Film by Rating</a>
+        <a href="#piechart">Genre Piechart</a>
+        <a href="#scatterplot">Scatterplot</a>
+        <a href="#heatmap">Heatmap</a>
+        <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+    </div>
+    <div class="container body-content">
+
+        <div class="row">
+            <div class="dc-data-count">
+                <h1>IMBD DATASET VISUALIZATIONS</h1>
+                <br>
+            </div>
+        </div>
+        <div id="newfilmform" class="row">
+        </div>
+        <div id="allfilms" class="row">
+        </div>
+        <div id="histogram">
+            <br><br>
+            <h3 >NUMBER OF MOVIES BY YEAR</h3>
+        </div>
+        <div id="histogram2">
+            <br><br>
+            <h3>NUMBER OF MOVIES BY IMDb SCORE</h3>
+        </div>
+        <div id="piechart">
+            <br><br>
+            <h3>NUMBER OF MOVIES BY GENRE</h3>
+        </div>
+        <div id="scatterplot">
+            <br><br>
+            <h3>MOVIE BUDGET vs DOMESTIC BOX OFFICE</h3>
+        </div>
+        <div id="heatmap">
+            <br><br>
+            <h3>Movie Domestic Box Office Gross by IMDb Score and GENRE</h3>
+        </div>
+        <div id="heatmapLegend"></div>
+    </div>
+    <script type="text/javascript">
+        var myHistogram = dc.barChart("#histogram");
+        var myHistogram2 = dc.barChart("#histogram2");
+        var myPiechart = dc.pieChart("#piechart");
+        var myScatterplot = dc.scatterPlot("#scatterplot");
+        var myHeatmap = dc.heatMap("#heatmap");
+        var myHeatmapLegend = dc.heatMap("#heatmapLegend");
+    </script>
+</body>
+</html>
