@@ -1,0 +1,16 @@
+In order to visualize this website some steps needs to be done:
+-Download Xampp server
+-In Xampp, start "Apache" and "MySQL"
+-Download code from this repository and paste it into the "htdocs" folder that can be found in the xampp folder
+-Upload the SQL script provided for the dataset in phpmyadmin
+-Write "localhost" in the browser searchbar and then follow the path website's index page. Open it
+
+## Built With
+* HTML5
+* CSS
+* [Python](https://www.python.org/) - For massaging movie dataset
+* [D3.js](https://d3js.org/) - JavaScript library for manipulating documents based on data
+* [DC.js](https://dc-js.github.io/dc.js/) - JavaScript library for data visualization and analysis
+* [Crossfilter](http://crossfilter.github.io/crossfilter/) - JavaScript library for exploring large multivariate datasets
+* [Bootstrap](https://getbootstrap.com/) - Front-end library
+* REST API -functionalities to add, edit and remove films from the database.
